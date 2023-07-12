@@ -27,3 +27,13 @@ jobs:
     - name: Run Python
       run: |
         python3 hello.py
+        
+ 
+    - uses: actions/checkout@v3
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-artifact
+
+    - name: Display structure of downloaded files
+      run: ls -R
