@@ -36,5 +36,4 @@ jobs:
         name: my-artifact ${{ matrix.python-version }}
         path: ${{ github.workspace }}
 
-    - name: Display structure of downloaded files
-      run: ls -R
+
