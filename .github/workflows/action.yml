@@ -36,4 +36,5 @@ jobs:
         name: my-artifact ${{ matrix.python-version }}
         path: ${{ github.workspace }}
 
-
+    - name: List Files
+      run: ls -R
