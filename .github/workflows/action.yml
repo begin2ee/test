@@ -33,7 +33,8 @@ jobs:
 
     - uses: actions/download-artifact@v3
       with:
-        name: my-artifact
+        name: my-artifact ${{ matrix.python-version }}
+        path: ${{ github.workspace }}
 
     - name: Display structure of downloaded files
       run: ls -R
