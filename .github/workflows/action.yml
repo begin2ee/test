@@ -31,6 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my-artifact
+          path: ${{ github.workspace }}
 
       - name: Checkout code again
         uses: actions/checkout@v3
@@ -39,7 +40,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: my-artifact
-          path: ${{ github.workspace }}
 
       - name: List Files
         run: ls -R
